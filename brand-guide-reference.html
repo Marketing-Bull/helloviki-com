@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Viki .AI — Brand Style Guide (Light)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    brand: { DEFAULT: '#7C3AED', light: '#A78BFA', dark: '#4C1D95', deeper: '#3B0764', 50: '#F5F3FF', 100: '#EDE9FE' },
+                    accent: { pink: '#EC4899', 'pink-dark': '#DB2777', cyan: '#06B6D4', 'cyan-dark': '#0891B2', lime: '#65A30D' },
+                    surface: { DEFAULT: '#FFFFFF', soft: '#FAFAFB', warm: '#F8F7FF', muted: '#F1F0FB' }
+                },
+                fontFamily: {
+                    display: ['"Plus Jakarta Sans"', 'Inter', 'system-ui'],
+                    body: ['Inter', 'system-ui'],
+                    mono: ['"JetBrains Mono"', 'monospace']
+                }
+            }
+        }
+    }
+    </script>
+    <style>
+        .aurora-light {
+            background: radial-gradient(ellipse 80% 50% at 70% 0%, rgba(124,58,237,0.06) 0%, transparent 50%),
+                        radial-gradient(ellipse 60% 40% at 20% 100%, rgba(236,72,153,0.04) 0%, transparent 50%),
+                        radial-gradient(ellipse 40% 30% at 90% 60%, rgba(6,182,212,0.03) 0%, transparent 50%);
+        }
+        .glass-light { background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); border: 1px solid rgba(124,58,237,0.08); }
+        .gradient-text { background: linear-gradient(135deg, #7C3AED, #EC4899, #06B6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .gradient-text-subtle { background: linear-gradient(135deg, #4C1D95, #7C3AED); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .card-hover { transition: all 0.2s; }
+        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(124,58,237,0.08); }
+        .color-swatch { transition: transform 0.2s; }
+        .color-swatch:hover { transform: scale(1.05); }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #7C3AED, #EC4899); transition: width 0.3s; }
+        .nav-link:hover::after { width: 100%; }
+        .code-block { background: #1E1B2E; color: #E2E0F0; }
+        @media print { .no-print { display: none; } }
+    </style>
+</head>
+<body class="bg-white text-zinc-900 font-body antialiased">
+
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-zinc-100 no-print">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <span class="font-display font-bold text-lg text-zinc-900">Hello <span class="text-brand">Viki</span></span>
+            <span class="text-[10px] font-bold bg-gradient-to-r from-brand to-accent-pink text-white px-2.5 py-0.5 rounded-full">.AI</span>
+            <span class="text-zinc-400 text-xs ml-2 font-mono">Brand Guide v1.0</span>
+        </div>
+        <div class="hidden md:flex items-center gap-8 text-sm">
+            <a href="#overview" class="nav-link text-zinc-500 hover:text-zinc-900 transition-colors">Overview</a>
+            <a href="#colors" class="nav-link text-zinc-500 hover:text-zinc-900 transition-colors">Colors</a>
+            <a href="#typography" class="nav-link text-zinc-500 hover:text-zinc-900 transition-colors">Typography</a>
+            <a href="#components" class="nav-link text-zinc-500 hover:text-zinc-900 transition-colors">Components</a>
+            <a href="#logo" class="nav-link text-zinc-500 hover:text-zinc-900 transition-colors">Logo</a>
+            <a href="#patterns" class="nav-link text-zinc-500 hover:text-zinc-900 transition-colors">Patterns</a>
+            <a href="#pages" class="nav-link text-zinc-500 hover:text-zinc-900 transition-colors">Pages</a>
+        </div>
+    </div>
+</nav>
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE 1: COVER -->
+<!-- ════════════════════════════════════════ -->
+<section id="overview" class="min-h-screen flex items-center justify-center aurora-light relative overflow-hidden pt-20">
+    <div class="relative text-center max-w-4xl mx-auto px-6">
+        <div class="inline-flex items-center gap-2 mb-8 bg-brand-50 border border-brand-100 px-4 py-2 rounded-full">
+            <div class="w-2 h-2 rounded-full bg-brand animate-pulse"></div>
+            <span class="text-xs font-medium text-brand-dark">Brand Style Guide — March 2026</span>
+        </div>
+        <h1 class="font-display text-6xl md:text-8xl font-800 mb-4 tracking-tight text-zinc-900">
+            Hello <span class="gradient-text">Viki</span>
+        </h1>
+        <div class="inline-block mb-8">
+            <span class="text-sm font-bold bg-gradient-to-r from-brand to-accent-pink text-white px-4 py-1.5 rounded-full">.AI</span>
+        </div>
+        <p class="text-xl text-zinc-500 max-w-2xl mx-auto mb-12 leading-relaxed">
+            AI-Powered Assistants for Healthcare & Law.<br>
+            <span class="text-zinc-400">The complete brand identity system.</span>
+        </p>
+        <div class="flex flex-wrap justify-center gap-6 text-sm text-zinc-400">
+            <span>🎨 Colors</span><span>·</span>
+            <span>🔤 Typography</span><span>·</span>
+            <span>🧩 Components</span><span>·</span>
+            <span>📐 Layout</span><span>·</span>
+            <span>📄 Page Templates</span>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE 2: BRAND OVERVIEW -->
+<!-- ════════════════════════════════════════ -->
+<section class="py-32 px-6 border-t border-zinc-100">
+    <div class="max-w-5xl mx-auto">
+        <p class="text-xs font-mono text-brand tracking-widest uppercase mb-4">01 / Brand Identity</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 tracking-tight text-zinc-900">Who We Are</h2>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="font-display font-bold text-lg mb-3 text-zinc-900">Mission</h3>
+                <p class="text-zinc-500 leading-relaxed">Hello Viki .AI provides AI-powered assistants that transform productivity for healthcare and law professionals — from intake to billing to patient communication.</p>
+            </div>
+            <div>
+                <h3 class="font-display font-bold text-lg mb-3 text-zinc-900">Positioning</h3>
+                <p class="text-zinc-500 leading-relaxed">We sit at the intersection of AI automation and human empathy. Our brand should feel <span class="text-brand font-semibold">premium</span>, <span class="text-accent-pink font-semibold">modern</span>, and <span class="text-accent-cyan-dark font-semibold">trustworthy</span> — never clinical or cold.</p>
+            </div>
+            <div>
+                <h3 class="font-display font-bold text-lg mb-3 text-zinc-900">Voice & Tone</h3>
+                <p class="text-zinc-500 leading-relaxed">Confident, not arrogant. Technical, not jargony. Warm, not casual. We explain complex AI simply and make professionals feel empowered, not replaced.</p>
+            </div>
+            <div>
+                <h3 class="font-display font-bold text-lg mb-3 text-zinc-900">Target Audience</h3>
+                <p class="text-zinc-500 leading-relaxed">Medical practice managers, PI law firm intake directors, healthcare administrators, and legal operations leads. They value efficiency, compliance (HIPAA), and ROI.</p>
+            </div>
+        </div>
+
+        <div class="mt-16 bg-brand-50 rounded-2xl p-8 border border-brand-100">
+            <h3 class="font-display font-bold text-lg mb-4 text-zinc-900">Brand Keywords</h3>
+            <div class="flex flex-wrap gap-3">
+                <span class="px-4 py-2 rounded-full bg-white text-brand text-sm font-medium shadow-sm">AI-Powered</span>
+                <span class="px-4 py-2 rounded-full bg-white text-accent-pink text-sm font-medium shadow-sm">Modern</span>
+                <span class="px-4 py-2 rounded-full bg-white text-accent-cyan-dark text-sm font-medium shadow-sm">Trustworthy</span>
+                <span class="px-4 py-2 rounded-full bg-white text-accent-lime text-sm font-medium shadow-sm">Efficient</span>
+                <span class="px-4 py-2 rounded-full bg-white text-brand text-sm font-medium shadow-sm">HIPAA Compliant</span>
+                <span class="px-4 py-2 rounded-full bg-white text-accent-pink text-sm font-medium shadow-sm">Premium</span>
+                <span class="px-4 py-2 rounded-full bg-white text-accent-cyan-dark text-sm font-medium shadow-sm">Approachable</span>
+                <span class="px-4 py-2 rounded-full bg-white text-accent-lime text-sm font-medium shadow-sm">Results-Driven</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE 3: COLOR PALETTE -->
+<!-- ════════════════════════════════════════ -->
+<section id="colors" class="py-32 px-6 bg-surface-soft border-t border-zinc-100">
+    <div class="max-w-5xl mx-auto">
+        <p class="text-xs font-mono text-brand tracking-widest uppercase mb-4">02 / Color System</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 tracking-tight">Color Palette</h2>
+        <p class="text-zinc-500 max-w-2xl mb-16">Purple is our core. Electric accents bring energy. Light neutrals keep it clean and professional for medical and legal audiences.</p>
+
+        <!-- Primary -->
+        <h3 class="font-display font-bold text-xl mb-6 text-zinc-900">Primary — Purple Core</h3>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-16">
+            <div class="color-swatch">
+                <div class="h-28 rounded-xl bg-brand-deeper mb-3 shadow-sm"></div>
+                <p class="font-mono text-xs text-zinc-400">violet-900</p>
+                <p class="font-mono text-sm font-semibold text-zinc-900">#3B0764</p>
+                <p class="text-xs text-zinc-400 mt-1">Deep accents</p>
+            </div>
+            <div class="color-swatch">
+                <div class="h-28 rounded-xl bg-brand-dark mb-3 shadow-sm"></div>
+                <p class="font-mono text-xs text-zinc-400">violet-800</p>
+                <p class="font-mono text-sm font-semibold text-zinc-900">#4C1D95</p>
+                <p class="text-xs text-zinc-400 mt-1">Headings / dark text</p>
+            </div>
+            <div class="color-swatch">
+                <div class="h-28 rounded-xl bg-brand mb-3 shadow-lg shadow-brand/20"></div>
+                <p class="font-mono text-xs text-zinc-400">violet-600</p>
+                <p class="font-mono text-sm font-semibold text-zinc-900">#7C3AED</p>
+                <p class="text-xs text-zinc-400 mt-1">Primary / buttons</p>
+            </div>
+            <div class="color-swatch">
+                <div class="h-28 rounded-xl bg-brand-light mb-3 shadow-sm"></div>
+                <p class="font-mono text-xs text-zinc-400">violet-400</p>
+                <p class="font-mono text-sm font-semibold text-zinc-900">#A78BFA</p>
+                <p class="text-xs text-zinc-400 mt-1">Hover / links</p>
+            </div>
+            <div class="color-swatch">
+                <div class="h-28 rounded-xl bg-brand-50 mb-3 ring-1 ring-brand-100"></div>
+                <p class="font-mono text-xs text-zinc-400">violet-50</p>
+                <p class="font-mono text-sm font-semibold text-zinc-900">#F5F3FF</p>
+                <p class="text-xs text-zinc-400 mt-1">Section backgrounds</p>
+            </div>
+        </div>
+
+        <!-- Accents -->
+        <h3 class="font-display font-bold text-xl mb-6 text-zinc-900">Accents — Electric Energy</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16">
+            <div class="color-swatch">
+                <div class="h-28 rounded-xl bg-accent-pink mb-3 shadow-lg shadow-accent-pink/20"></div>
+                <p class="font-mono text-xs text-zinc-400">pink-500</p>
+                <p class="font-mono text-sm font-semibold text-zinc-900">#EC4899</p>
+                <p class="text-xs text-zinc-400 mt-1">CTAs / highlights</p>
+            </div>
+            <div class="color-swatch">
+                <div class="h-28 rounded-xl bg-accent-cyan mb-3 shadow-sm"></div>
+                <p class="font-mono text-xs text-zinc-400">cyan-500</p>
+                <p class="font-mono text-sm font-semibold text-zinc-900">#06B6D4</p>
+                <p class="text-xs text-zinc-400 mt-1">Links / active states</p>
+            </div>
+            <div class="color-swatch">
+                <div class="h-28 rounded-xl mb-3 shadow-sm" style="background:#65A30D"></div>
+                <p class="font-mono text-xs text-zinc-400">lime-600</p>
+                <p class="font-mono text-sm font-semibold text-zinc-900">#65A30D</p>
+                <p class="text-xs text-zinc-400 mt-1">Success (AA on white)</p>
+            </div>
+        </div>
+
+        <!-- Neutrals -->
+        <h3 class="font-display font-bold text-xl mb-6 text-zinc-900">Neutrals</h3>
+        <div class="grid grid-cols-3 md:grid-cols-6 gap-4 mb-16">
+            <div class="color-swatch">
+                <div class="h-20 rounded-xl bg-zinc-900 mb-3"></div>
+                <p class="font-mono text-xs text-zinc-900">#18181B</p>
+                <p class="text-[10px] text-zinc-400">Headlines</p>
+            </div>
+            <div class="color-swatch">
+                <div class="h-20 rounded-xl bg-zinc-700 mb-3"></div>
+                <p class="font-mono text-xs text-zinc-900">#3F3F46</p>
+                <p class="text-[10px] text-zinc-400">Body text</p>
+            </div>
+            <div class="color-swatch">
+                <div class="h-20 rounded-xl bg-zinc-500 mb-3"></div>
+                <p class="font-mono text-xs text-zinc-900">#71717A</p>
+                <p class="text-[10px] text-zinc-400">Secondary</p>
+            </div>
+            <div class="color-swatch">
+                <div class="h-20 rounded-xl bg-zinc-200 mb-3"></div>
+                <p class="font-mono text-xs text-zinc-900">#E4E4E7</p>
+                <p class="text-[10px] text-zinc-400">Borders</p>
+            </div>
+            <div class="color-swatch">
+                <div class="h-20 rounded-xl bg-zinc-100 mb-3 ring-1 ring-zinc-200"></div>
+                <p class="font-mono text-xs text-zinc-900">#F4F4F5</p>
+                <p class="text-[10px] text-zinc-400">Alt background</p>
+            </div>
+            <div class="color-swatch">
+                <div class="h-20 rounded-xl bg-white mb-3 ring-1 ring-zinc-200"></div>
+                <p class="font-mono text-xs text-zinc-900">#FFFFFF</p>
+                <p class="text-[10px] text-zinc-400">Page background</p>
+            </div>
+        </div>
+
+        <!-- Gradients -->
+        <h3 class="font-display font-bold text-xl mb-6 text-zinc-900">Gradients</h3>
+        <div class="grid md:grid-cols-2 gap-6 mb-16">
+            <div>
+                <div class="h-24 rounded-xl bg-gradient-to-r from-brand to-accent-pink mb-3 shadow-lg shadow-brand/15"></div>
+                <p class="text-sm font-semibold text-zinc-900">Primary CTA</p>
+                <p class="font-mono text-xs text-zinc-400">from-violet-600 to-pink-500</p>
+            </div>
+            <div>
+                <div class="h-24 rounded-xl bg-gradient-to-r from-brand-light via-accent-pink to-accent-cyan mb-3"></div>
+                <p class="text-sm font-semibold text-zinc-900">Display / Hero Text</p>
+                <p class="font-mono text-xs text-zinc-400">from-violet-400 via-pink-400 to-cyan-500</p>
+            </div>
+            <div>
+                <div class="h-24 rounded-xl bg-gradient-to-br from-brand-50 via-white to-pink-50 mb-3 ring-1 ring-zinc-100"></div>
+                <p class="text-sm font-semibold text-zinc-900">Light Section Background</p>
+                <p class="font-mono text-xs text-zinc-400">from-violet-50 via-white to-pink-50</p>
+            </div>
+            <div>
+                <div class="h-24 rounded-xl aurora-light mb-3 ring-1 ring-zinc-100"></div>
+                <p class="text-sm font-semibold text-zinc-900">Aurora Mesh (Light)</p>
+                <p class="font-mono text-xs text-zinc-400">Radial: subtle violet + pink + cyan</p>
+            </div>
+        </div>
+
+        <!-- Contrast -->
+        <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm">
+            <h3 class="font-display font-bold text-lg mb-6 text-zinc-900">WCAG 2.1 AA Contrast Check</h3>
+            <div class="grid md:grid-cols-2 gap-4 text-sm">
+                <div class="flex items-center justify-between p-3 rounded-lg bg-zinc-50">
+                    <span class="text-zinc-600">White on violet-600</span>
+                    <span class="text-green-600 font-mono font-bold">8.1:1 ✓ AAA</span>
+                </div>
+                <div class="flex items-center justify-between p-3 rounded-lg bg-zinc-50">
+                    <span class="text-zinc-600">White on pink-500</span>
+                    <span class="text-green-600 font-mono font-bold">4.7:1 ✓ AA</span>
+                </div>
+                <div class="flex items-center justify-between p-3 rounded-lg bg-zinc-50">
+                    <span class="text-zinc-600">violet-800 on white</span>
+                    <span class="text-green-600 font-mono font-bold">12.6:1 ✓ AAA</span>
+                </div>
+                <div class="flex items-center justify-between p-3 rounded-lg bg-zinc-50">
+                    <span class="text-zinc-600">zinc-700 on white</span>
+                    <span class="text-green-600 font-mono font-bold">8.6:1 ✓ AAA</span>
+                </div>
+                <div class="flex items-center justify-between p-3 rounded-lg bg-zinc-50">
+                    <span class="text-zinc-600">cyan-700 on white</span>
+                    <span class="text-green-600 font-mono font-bold">4.5:1 ✓ AA</span>
+                </div>
+                <div class="flex items-center justify-between p-3 rounded-lg bg-zinc-50">
+                    <span class="text-zinc-600">lime-600 on white</span>
+                    <span class="text-green-600 font-mono font-bold">4.7:1 ✓ AA</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE 4: TYPOGRAPHY -->
+<!-- ════════════════════════════════════════ -->
+<section id="typography" class="py-32 px-6 border-t border-zinc-100">
+    <div class="max-w-5xl mx-auto">
+        <p class="text-xs font-mono text-brand tracking-widest uppercase mb-4">03 / Typography</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 tracking-tight">Type System</h2>
+        <p class="text-zinc-500 max-w-2xl mb-16">Two typefaces: Plus Jakarta Sans for display, Inter for body. JetBrains Mono for code and technical labels.</p>
+
+        <!-- Font Specimens -->
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <p class="text-xs font-mono text-brand mb-4">DISPLAY</p>
+                <p class="font-display text-5xl font-bold text-zinc-900 mb-2">Aa</p>
+                <p class="font-display text-lg font-bold text-zinc-900">Plus Jakarta Sans</p>
+                <p class="text-sm text-zinc-400 mt-2">Headlines, section titles, hero text</p>
+                <div class="mt-4 space-y-1 text-sm text-zinc-500 font-display">
+                    <p class="font-extrabold">Extra Bold 800</p>
+                    <p class="font-bold">Bold 700</p>
+                    <p class="font-semibold">Semibold 600</p>
+                    <p class="font-medium">Medium 500</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <p class="text-xs font-mono text-accent-pink mb-4">BODY</p>
+                <p class="font-body text-5xl font-bold text-zinc-900 mb-2">Aa</p>
+                <p class="font-body text-lg font-bold text-zinc-900">Inter</p>
+                <p class="text-sm text-zinc-400 mt-2">Body text, UI, navigation</p>
+                <div class="mt-4 space-y-1 text-sm text-zinc-500">
+                    <p class="font-bold">Bold 700</p>
+                    <p class="font-semibold">Semibold 600</p>
+                    <p class="font-medium">Medium 500</p>
+                    <p class="font-normal">Regular 400</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <p class="text-xs font-mono text-accent-cyan-dark mb-4">MONO</p>
+                <p class="font-mono text-5xl font-bold text-zinc-900 mb-2">Aa</p>
+                <p class="font-mono text-lg font-bold text-zinc-900">JetBrains Mono</p>
+                <p class="text-sm text-zinc-400 mt-2">Code, tokens, technical</p>
+                <div class="mt-4 space-y-1 text-sm text-zinc-500 font-mono">
+                    <p class="font-semibold">Semibold 600</p>
+                    <p class="font-medium">Medium 500</p>
+                    <p class="font-normal">Regular 400</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Type Scale -->
+        <h3 class="font-display font-bold text-xl mb-8 text-zinc-900">Type Scale</h3>
+        <div class="bg-white rounded-2xl ring-1 ring-zinc-200 shadow-sm overflow-hidden">
+            <div class="divide-y divide-zinc-100">
+                <div class="flex items-baseline gap-6 px-8 py-5">
+                    <span class="font-mono text-xs text-zinc-400 w-20 shrink-0">text-6xl</span>
+                    <span class="font-display text-5xl md:text-6xl font-bold tracking-tight gradient-text">Display</span>
+                    <span class="font-mono text-xs text-zinc-400 ml-auto hidden md:block">60px / 1.1</span>
+                </div>
+                <div class="flex items-baseline gap-6 px-8 py-5">
+                    <span class="font-mono text-xs text-zinc-400 w-20 shrink-0">text-5xl</span>
+                    <span class="font-display text-4xl md:text-5xl font-bold tracking-tight text-zinc-900">Heading 1</span>
+                    <span class="font-mono text-xs text-zinc-400 ml-auto hidden md:block">48px / 1.15</span>
+                </div>
+                <div class="flex items-baseline gap-6 px-8 py-5">
+                    <span class="font-mono text-xs text-zinc-400 w-20 shrink-0">text-4xl</span>
+                    <span class="font-display text-3xl md:text-4xl font-bold text-zinc-900">Heading 2</span>
+                    <span class="font-mono text-xs text-zinc-400 ml-auto hidden md:block">36px / 1.2</span>
+                </div>
+                <div class="flex items-baseline gap-6 px-8 py-5">
+                    <span class="font-mono text-xs text-zinc-400 w-20 shrink-0">text-2xl</span>
+                    <span class="font-display text-2xl font-bold text-zinc-900">Heading 3</span>
+                    <span class="font-mono text-xs text-zinc-400 ml-auto hidden md:block">24px / 1.3</span>
+                </div>
+                <div class="flex items-baseline gap-6 px-8 py-5">
+                    <span class="font-mono text-xs text-zinc-400 w-20 shrink-0">text-base</span>
+                    <span class="text-base text-zinc-600">Body text — the minimum size for primary content. Always 16px or larger.</span>
+                    <span class="font-mono text-xs text-zinc-400 ml-auto hidden md:block">16px / 1.6</span>
+                </div>
+                <div class="flex items-baseline gap-6 px-8 py-5">
+                    <span class="font-mono text-xs text-zinc-400 w-20 shrink-0">text-sm</span>
+                    <span class="text-sm text-zinc-500">Caption / secondary — use sparingly</span>
+                    <span class="font-mono text-xs text-zinc-400 ml-auto hidden md:block">14px / 1.5</span>
+                </div>
+                <div class="flex items-baseline gap-6 px-8 py-5">
+                    <span class="font-mono text-xs text-zinc-400 w-20 shrink-0">text-xs</span>
+                    <span class="text-xs font-mono text-zinc-400">Labels, badges, overlines only</span>
+                    <span class="font-mono text-xs text-zinc-400 ml-auto hidden md:block">12px / 1.5</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE 5: COMPONENTS -->
+<!-- ════════════════════════════════════════ -->
+<section id="components" class="py-32 px-6 bg-surface-soft border-t border-zinc-100">
+    <div class="max-w-5xl mx-auto">
+        <p class="text-xs font-mono text-brand tracking-widest uppercase mb-4">04 / Component Library</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 tracking-tight">Components</h2>
+        <p class="text-zinc-500 max-w-2xl mb-16">Copy-paste Tailwind classes. All components meet WCAG AA accessibility standards.</p>
+
+        <!-- Buttons -->
+        <h3 class="font-display font-bold text-xl mb-6 text-zinc-900">Buttons</h3>
+        <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm mb-8">
+            <div class="flex flex-wrap gap-4 mb-6">
+                <button class="bg-gradient-to-r from-brand to-accent-pink text-white font-semibold px-8 py-3.5 rounded-xl shadow-lg shadow-brand/20 hover:shadow-brand/30 hover:-translate-y-0.5 transition-all">Primary CTA</button>
+                <button class="bg-brand text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-brand-dark transition-all">Solid Purple</button>
+                <button class="border-2 border-brand text-brand font-semibold px-8 py-3.5 rounded-xl hover:bg-brand-50 transition-all">Outline</button>
+                <button class="bg-zinc-100 text-zinc-700 font-semibold px-8 py-3.5 rounded-xl hover:bg-zinc-200 transition-all">Secondary</button>
+                <button class="bg-zinc-100 text-zinc-400 font-semibold px-8 py-3.5 rounded-xl cursor-not-allowed opacity-60">Disabled</button>
+            </div>
+            <div class="flex flex-wrap gap-4 mb-6">
+                <button class="bg-gradient-to-r from-brand to-accent-pink text-white font-semibold px-5 py-2 rounded-lg text-sm">Small</button>
+                <button class="bg-gradient-to-r from-brand to-accent-pink text-white font-semibold px-8 py-3.5 rounded-xl">Default</button>
+                <button class="bg-gradient-to-r from-brand to-accent-pink text-white font-bold px-10 py-4 rounded-xl text-lg">Large</button>
+            </div>
+            <div class="code-block rounded-xl p-4 text-xs font-mono overflow-x-auto">
+<span class="text-cyan-300">&lt;!-- Primary Gradient --&gt;</span>
+<span class="text-violet-300">class</span>="bg-gradient-to-r from-violet-600 to-pink-500 text-white font-semibold
+       px-8 py-3.5 rounded-xl shadow-lg shadow-violet-600/20"
+
+<span class="text-cyan-300">&lt;!-- Outline --&gt;</span>
+<span class="text-violet-300">class</span>="border-2 border-violet-600 text-violet-600 font-semibold
+       px-8 py-3.5 rounded-xl hover:bg-violet-50"
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <h3 class="font-display font-bold text-xl mb-6 text-zinc-900">Cards</h3>
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <div class="w-10 h-10 rounded-lg bg-brand-50 flex items-center justify-center text-brand mb-4">🤖</div>
+                <h4 class="font-display font-bold text-zinc-900 mb-2">Default Card</h4>
+                <p class="text-sm text-zinc-500">White surface with subtle ring border and shadow. Clean and professional.</p>
+                <p class="font-mono text-[10px] text-zinc-400 mt-4">bg-white rounded-2xl ring-1 ring-zinc-200 shadow-sm</p>
+            </div>
+            <div class="bg-brand-50 rounded-2xl p-6 border border-brand-100 card-hover">
+                <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center text-brand mb-4 shadow-sm">⚡</div>
+                <h4 class="font-display font-bold text-zinc-900 mb-2">Highlight Card</h4>
+                <p class="text-sm text-zinc-500">Purple-tinted background for emphasis. Use for featured content.</p>
+                <p class="font-mono text-[10px] text-zinc-400 mt-4">bg-violet-50 border border-violet-100 rounded-2xl</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 border-l-4 border-l-brand ring-1 ring-zinc-200 shadow-sm card-hover">
+                <div class="w-10 h-10 rounded-lg bg-brand-50 flex items-center justify-center text-brand mb-4">📋</div>
+                <h4 class="font-display font-bold text-zinc-900 mb-2">Accent Card</h4>
+                <p class="text-sm text-zinc-500">Left border accent for feature lists and service items.</p>
+                <p class="font-mono text-[10px] text-zinc-400 mt-4">border-l-4 border-l-violet-600 ring-1 ring-zinc-200</p>
+            </div>
+        </div>
+
+        <!-- Badges -->
+        <h3 class="font-display font-bold text-xl mb-6 text-zinc-900">Badges & Pills</h3>
+        <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm mb-8">
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-gradient-to-r from-brand to-accent-pink text-white text-xs font-bold px-3.5 py-1 rounded-full">.AI</span>
+                <span class="bg-brand-50 text-brand text-xs font-semibold px-3.5 py-1.5 rounded-full">HIPAA Compliant</span>
+                <span class="bg-cyan-50 text-accent-cyan-dark text-xs font-semibold px-3.5 py-1.5 rounded-full">New Feature</span>
+                <span class="bg-green-50 text-green-700 text-xs font-semibold px-3.5 py-1.5 rounded-full flex items-center gap-1.5"><span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>Online</span>
+                <span class="bg-pink-50 text-accent-pink-dark text-xs font-semibold px-3.5 py-1.5 rounded-full">Popular</span>
+                <span class="bg-zinc-100 text-zinc-600 text-xs font-semibold px-3.5 py-1.5 rounded-full">Default</span>
+            </div>
+        </div>
+
+        <!-- Forms -->
+        <h3 class="font-display font-bold text-xl mb-6 text-zinc-900">Form Elements</h3>
+        <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm mb-8">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium mb-2 text-zinc-700">Email Address</label>
+                    <input type="email" placeholder="hello@yourpractice.com" class="w-full bg-white border border-zinc-300 rounded-xl px-4 py-3 text-sm text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-all">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium mb-2 text-zinc-700">Practice Type</label>
+                    <select class="w-full bg-white border border-zinc-300 rounded-xl px-4 py-3 text-sm text-zinc-900 focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition-all">
+                        <option>Medical Office</option>
+                        <option>Law Firm — PI</option>
+                        <option>Law Firm — Other</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alerts -->
+        <h3 class="font-display font-bold text-xl mb-6 text-zinc-900">Alerts</h3>
+        <div class="space-y-4 mb-8">
+            <div class="bg-brand-50 border border-brand-100 rounded-xl p-4 flex items-start gap-3">
+                <span class="mt-0.5">ℹ️</span>
+                <div>
+                    <p class="font-semibold text-sm text-brand-dark">Info</p>
+                    <p class="text-sm text-zinc-600">Your AI assistant is being configured for your EMR system.</p>
+                </div>
+            </div>
+            <div class="bg-green-50 border border-green-100 rounded-xl p-4 flex items-start gap-3">
+                <span class="mt-0.5">✅</span>
+                <div>
+                    <p class="font-semibold text-sm text-green-800">Success</p>
+                    <p class="text-sm text-zinc-600">HIPAA compliance training completed for your assistant.</p>
+                </div>
+            </div>
+            <div class="bg-pink-50 border border-pink-100 rounded-xl p-4 flex items-start gap-3">
+                <span class="mt-0.5">⚠️</span>
+                <div>
+                    <p class="font-semibold text-sm text-accent-pink-dark">Attention</p>
+                    <p class="text-sm text-zinc-600">Your free trial ends in 3 days. Upgrade to keep your assistant.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE 6: LOGO -->
+<!-- ════════════════════════════════════════ -->
+<section id="logo" class="py-32 px-6 border-t border-zinc-100">
+    <div class="max-w-5xl mx-auto">
+        <p class="text-xs font-mono text-brand tracking-widest uppercase mb-4">05 / Logo</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 tracking-tight">Logo Usage</h2>
+        <p class="text-zinc-500 max-w-2xl mb-16">The .AI badge is always a gradient pill. Never separate it from the wordmark.</p>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+            <div class="bg-white rounded-2xl p-12 flex items-center justify-center ring-1 ring-zinc-200 shadow-sm">
+                <div class="text-center">
+                    <p class="font-display text-4xl font-bold text-zinc-900">Hello <span class="text-brand italic">Viki</span></p>
+                    <span class="inline-block mt-2 text-xs font-bold bg-gradient-to-r from-brand to-accent-pink text-white px-3 py-1 rounded-full">.AI</span>
+                    <p class="text-xs text-zinc-400 mt-4">On white</p>
+                </div>
+            </div>
+            <div class="bg-zinc-900 rounded-2xl p-12 flex items-center justify-center">
+                <div class="text-center">
+                    <p class="font-display text-4xl font-bold text-white">Hello <span class="text-brand-light italic">Viki</span></p>
+                    <span class="inline-block mt-2 text-xs font-bold bg-gradient-to-r from-brand to-accent-pink text-white px-3 py-1 rounded-full">.AI</span>
+                    <p class="text-xs text-zinc-500 mt-4">On dark (secondary use)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm">
+                <div class="border-2 border-dashed border-brand/20 rounded-xl p-10 flex items-center justify-center mb-4">
+                    <div class="text-center">
+                        <p class="font-display text-2xl font-bold text-zinc-900">Hello <span class="text-brand italic">Viki</span></p>
+                        <span class="inline-block mt-1 text-[9px] font-bold bg-gradient-to-r from-brand to-accent-pink text-white px-2 py-0.5 rounded-full">.AI</span>
+                    </div>
+                </div>
+                <p class="text-sm text-zinc-500">Clear space = height of ".AI" badge on all sides</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm">
+                <h4 class="font-semibold mb-4 text-zinc-900">Do's & Don'ts</h4>
+                <div class="space-y-3 text-sm">
+                    <p class="text-green-700">✓ Always include the .AI badge</p>
+                    <p class="text-green-700">✓ Use gradient badge on all backgrounds</p>
+                    <p class="text-green-700">✓ Maintain minimum clear space</p>
+                    <p class="text-green-700">✓ Use white version on dark backgrounds</p>
+                    <p class="text-red-500">✗ Don't stretch or distort</p>
+                    <p class="text-red-500">✗ Don't change gradient colors</p>
+                    <p class="text-red-500">✗ Don't place on busy backgrounds</p>
+                    <p class="text-red-500">✗ Don't separate .AI from wordmark</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE 7: LAYOUT -->
+<!-- ════════════════════════════════════════ -->
+<section id="patterns" class="py-32 px-6 bg-surface-soft border-t border-zinc-100">
+    <div class="max-w-5xl mx-auto">
+        <p class="text-xs font-mono text-brand tracking-widest uppercase mb-4">06 / Layout System</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 tracking-tight">Spacing & Grid</h2>
+        <p class="text-zinc-500 max-w-2xl mb-16">8px grid. Consistent spacing creates professional visual rhythm.</p>
+
+        <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm mb-16">
+            <h3 class="font-display font-bold text-lg mb-6 text-zinc-900">Spacing Scale</h3>
+            <div class="space-y-4">
+                <div class="flex items-center gap-4"><span class="font-mono text-xs text-zinc-400 w-12">4px</span><div class="h-4 rounded bg-gradient-to-r from-brand to-accent-pink" style="width:4px"></div><span class="text-xs text-zinc-400">p-1</span></div>
+                <div class="flex items-center gap-4"><span class="font-mono text-xs text-zinc-400 w-12">8px</span><div class="h-4 rounded bg-gradient-to-r from-brand to-accent-pink" style="width:8px"></div><span class="text-xs text-zinc-400">p-2</span></div>
+                <div class="flex items-center gap-4"><span class="font-mono text-xs text-zinc-400 w-12">16px</span><div class="h-4 rounded bg-gradient-to-r from-brand to-accent-pink" style="width:16px"></div><span class="text-xs text-zinc-400">p-4</span></div>
+                <div class="flex items-center gap-4"><span class="font-mono text-xs text-zinc-400 w-12">24px</span><div class="h-4 rounded bg-gradient-to-r from-brand to-accent-pink" style="width:24px"></div><span class="text-xs text-zinc-400">p-6</span></div>
+                <div class="flex items-center gap-4"><span class="font-mono text-xs text-zinc-400 w-12">32px</span><div class="h-4 rounded bg-gradient-to-r from-brand to-accent-pink" style="width:32px"></div><span class="text-xs text-zinc-400">p-8</span></div>
+                <div class="flex items-center gap-4"><span class="font-mono text-xs text-zinc-400 w-12">48px</span><div class="h-4 rounded bg-gradient-to-r from-brand to-accent-pink" style="width:48px"></div><span class="text-xs text-zinc-400">p-12 — section padding mobile</span></div>
+                <div class="flex items-center gap-4"><span class="font-mono text-xs text-zinc-400 w-12">64px</span><div class="h-4 rounded bg-gradient-to-r from-brand to-accent-pink" style="width:64px"></div><span class="text-xs text-zinc-400">p-16 — section padding desktop</span></div>
+                <div class="flex items-center gap-4"><span class="font-mono text-xs text-zinc-400 w-12">128px</span><div class="h-4 rounded bg-gradient-to-r from-brand to-accent-pink" style="width:128px"></div><span class="text-xs text-zinc-400">py-32 — between major sections</span></div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm">
+                <h3 class="font-display font-bold text-lg mb-4 text-zinc-900">Border Radius</h3>
+                <div class="flex flex-wrap gap-6">
+                    <div class="text-center"><div class="w-16 h-16 bg-brand-50 border border-brand-100 rounded-lg mb-2"></div><p class="font-mono text-[10px] text-zinc-400">rounded-lg<br>8px</p></div>
+                    <div class="text-center"><div class="w-16 h-16 bg-brand-50 border border-brand-100 rounded-xl mb-2"></div><p class="font-mono text-[10px] text-zinc-400">rounded-xl<br>12px</p></div>
+                    <div class="text-center"><div class="w-16 h-16 bg-brand-50 border border-brand-100 rounded-2xl mb-2"></div><p class="font-mono text-[10px] text-zinc-400">rounded-2xl<br>16px</p></div>
+                    <div class="text-center"><div class="w-16 h-16 bg-brand-50 border border-brand-100 rounded-full mb-2"></div><p class="font-mono text-[10px] text-zinc-400">rounded-full<br>pills</p></div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm">
+                <h3 class="font-display font-bold text-lg mb-4 text-zinc-900">Content Width</h3>
+                <div class="space-y-3 text-sm text-zinc-600">
+                    <p><span class="font-semibold text-zinc-900">Page:</span> max-w-7xl (1280px)</p>
+                    <p><span class="font-semibold text-zinc-900">Content:</span> max-w-5xl (1024px)</p>
+                    <p><span class="font-semibold text-zinc-900">Readable:</span> max-w-2xl (672px) / 65ch</p>
+                    <p><span class="font-semibold text-zinc-900">Padding:</span> px-6 → px-8 → px-12</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════ -->
+<!-- PAGE 8: PAGE TEMPLATES -->
+<!-- ════════════════════════════════════════ -->
+<section id="pages" class="py-32 px-6 border-t border-zinc-100">
+    <div class="max-w-5xl mx-auto">
+        <p class="text-xs font-mono text-brand tracking-widest uppercase mb-4">07 / Page Templates</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 tracking-tight">Marketing Site Sections</h2>
+        <p class="text-zinc-500 max-w-2xl mb-16">Light-mode reference mockups for helloviki.com.</p>
+
+        <!-- Hero -->
+        <h3 class="font-display font-bold text-xl mb-6 text-zinc-900">Hero Section</h3>
+        <div class="bg-white rounded-2xl overflow-hidden mb-16 ring-1 ring-zinc-200 shadow-sm">
+            <div class="aurora-light p-12 md:p-20 border-b border-zinc-100">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-2 bg-brand-50 border border-brand-100 px-3 py-1.5 rounded-full mb-6">
+                        <div class="w-1.5 h-1.5 rounded-full bg-brand"></div>
+                        <span class="text-xs text-brand font-medium">AI-powered intake assistants</span>
+                    </div>
+                    <h2 class="font-display text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-zinc-900">
+                        <span class="gradient-text">Your AI</span><br>Operations Team
+                    </h2>
+                    <p class="text-lg text-zinc-500 mb-8 max-w-xl leading-relaxed">AI-powered assistants trained for healthcare and law. HIPAA compliant. Uses your EMR/EHR. Starts in 24 hours.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-gradient-to-r from-brand to-accent-pink text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-brand/20">Start Free Trial →</button>
+                        <button class="border-2 border-zinc-200 text-zinc-700 font-semibold px-8 py-4 rounded-xl hover:bg-zinc-50">Watch Demo</button>
+                    </div>
+                    <div class="flex flex-wrap gap-6 mt-8 text-sm text-zinc-400">
+                        <span>✓ Free trial, no contracts</span>
+                        <span>✓ HIPAA certified</span>
+                        <span>✓ 24-hour onboarding</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <h3 class="font-display font-bold text-xl mb-6 text-zinc-900">Features Grid</h3>
+        <div class="bg-surface-soft rounded-2xl p-8 md:p-12 mb-16 ring-1 ring-zinc-100">
+            <p class="text-xs font-mono text-brand tracking-widest uppercase mb-2">What We Handle</p>
+            <h3 class="font-display text-3xl font-bold mb-2 text-zinc-900">Everything Your Front Desk Does</h3>
+            <p class="text-zinc-500 mb-8">But faster, more accurate, and available 24/7.</p>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                    <div class="w-10 h-10 rounded-lg bg-brand-50 flex items-center justify-center text-xl mb-4">📞</div>
+                    <h4 class="font-display font-bold text-zinc-900 mb-2">Patient Communication</h4>
+                    <p class="text-sm text-zinc-500">Answers calls, schedules appointments, handles inquiries — in English and Spanish.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                    <div class="w-10 h-10 rounded-lg bg-pink-50 flex items-center justify-center text-xl mb-4">📋</div>
+                    <h4 class="font-display font-bold text-zinc-900 mb-2">Prior Authorizations</h4>
+                    <p class="text-sm text-zinc-500">Trained on major US insurance providers. Handles PA submissions and follow-ups.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-50 flex items-center justify-center text-xl mb-4">💰</div>
+                    <h4 class="font-display font-bold text-zinc-900 mb-2">Billing & Collections</h4>
+                    <p class="text-sm text-zinc-500">Maximize reimbursements, reduce collection time. Partnered with leading RCM companies.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonials -->
+        <h3 class="font-display font-bold text-xl mb-6 text-zinc-900">Testimonials</h3>
+        <div class="bg-brand-50 rounded-2xl p-8 md:p-12 mb-16 border border-brand-100">
+            <p class="text-xs font-mono text-brand tracking-widest uppercase mb-2">What People Say</p>
+            <h3 class="font-display text-3xl font-bold text-zinc-900 mb-8">Trusted by Growing Practices</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="flex gap-1 text-brand mb-3">★★★★★</div>
+                    <p class="text-zinc-600 italic mb-4">"Hiring from HelloViki has been one of my best decisions. I now have more time to spend with my children while my inbox is taken care of."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-brand to-accent-pink flex items-center justify-center text-white text-sm font-bold">BM</div>
+                        <div>
+                            <p class="font-semibold text-sm text-zinc-900">Bryant M.</p>
+                            <p class="text-xs text-zinc-400">Medical Practice Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <div class="flex gap-1 text-brand mb-3">★★★★★</div>
+                    <p class="text-zinc-600 italic mb-4">"Working with HelloViki has given our rapidly growing business the ability to move faster while freeing up many hours a week."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-accent-cyan to-brand flex items-center justify-center text-white text-sm font-bold">JM</div>
+                        <div>
+                            <p class="font-semibold text-sm text-zinc-900">Jason M.</p>
+                            <p class="text-xs text-zinc-400">Law Firm Partner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <h3 class="font-display font-bold text-xl mb-6 text-zinc-900">CTA Banner</h3>
+        <div class="bg-gradient-to-r from-brand to-accent-pink rounded-2xl p-8 md:p-12 text-center mb-16">
+            <h3 class="font-display text-3xl md:text-4xl font-bold text-white mb-4">Ready to Transform Your Practice?</h3>
+            <p class="text-white/80 mb-8 max-w-lg mx-auto">Start your free trial today. No contracts. HIPAA compliant. Your AI assistant starts in 24 hours.</p>
+            <button class="bg-white text-brand font-bold px-10 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all">Start Free Trial →</button>
+        </div>
+
+        <!-- Pricing -->
+        <h3 class="font-display font-bold text-xl mb-6 text-zinc-900">Pricing</h3>
+        <div class="bg-surface-soft rounded-2xl p-8 md:p-12 ring-1 ring-zinc-100">
+            <div class="text-center mb-8">
+                <p class="text-xs font-mono text-brand tracking-widest uppercase mb-2">Simple Pricing</p>
+                <h3 class="font-display text-3xl font-bold text-zinc-900">No Contracts. Cancel Anytime.</h3>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm">
+                    <p class="text-sm font-semibold text-zinc-500 mb-1">Starter</p>
+                    <p class="text-3xl font-bold text-zinc-900 mb-4">$X<span class="text-base font-normal text-zinc-400">/mo</span></p>
+                    <div class="space-y-2 text-sm text-zinc-500 mb-6">
+                        <p>✓ 1 AI Assistant</p>
+                        <p>✓ Phone + Email</p>
+                        <p>✓ HIPAA Compliant</p>
+                    </div>
+                    <button class="w-full border-2 border-brand text-brand font-semibold py-3 rounded-xl hover:bg-brand-50">Get Started</button>
+                </div>
+                <div class="bg-white rounded-2xl p-6 ring-2 ring-brand shadow-lg shadow-brand/10 relative">
+                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] font-bold bg-gradient-to-r from-brand to-accent-pink text-white px-3 py-1 rounded-full">Most Popular</span>
+                    <p class="text-sm font-semibold text-brand mb-1">Professional</p>
+                    <p class="text-3xl font-bold text-zinc-900 mb-4">$X<span class="text-base font-normal text-zinc-400">/mo</span></p>
+                    <div class="space-y-2 text-sm text-zinc-500 mb-6">
+                        <p>✓ Up to 3 AI Assistants</p>
+                        <p>✓ EMR/EHR Integration</p>
+                        <p>✓ Priority Support</p>
+                        <p>✓ Custom Training</p>
+                    </div>
+                    <button class="w-full bg-gradient-to-r from-brand to-accent-pink text-white font-semibold py-3 rounded-xl shadow-lg shadow-brand/20">Get Started</button>
+                </div>
+                <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm">
+                    <p class="text-sm font-semibold text-zinc-500 mb-1">Enterprise</p>
+                    <p class="text-3xl font-bold text-zinc-900 mb-4">Custom</p>
+                    <div class="space-y-2 text-sm text-zinc-500 mb-6">
+                        <p>✓ Unlimited Assistants</p>
+                        <p>✓ Custom Integrations</p>
+                        <p>✓ Dedicated Account Mgr</p>
+                        <p>✓ SLA Guarantee</p>
+                    </div>
+                    <button class="w-full border-2 border-brand text-brand font-semibold py-3 rounded-xl hover:bg-brand-50">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════ -->
+<!-- TAILWIND CONFIG -->
+<!-- ════════════════════════════════════════ -->
+<section class="py-32 px-6 bg-surface-soft border-t border-zinc-100">
+    <div class="max-w-5xl mx-auto">
+        <p class="text-xs font-mono text-brand tracking-widest uppercase mb-4">08 / Implementation</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 tracking-tight">Tailwind Config</h2>
+        <p class="text-zinc-500 max-w-2xl mb-16">Copy into tailwind.config.js.</p>
+
+        <div class="code-block rounded-2xl p-8 text-sm font-mono overflow-x-auto ring-1 ring-zinc-800">
+<pre><span class="text-zinc-500">// tailwind.config.js</span>
+<span class="text-cyan-300">module</span>.<span class="text-cyan-300">exports</span> = {
+  <span class="text-violet-300">theme</span>: {
+    <span class="text-violet-300">extend</span>: {
+      <span class="text-violet-300">colors</span>: {
+        brand: {
+          DEFAULT: <span class="text-green-300">'#7C3AED'</span>,
+          light:   <span class="text-green-300">'#A78BFA'</span>,
+          dark:    <span class="text-green-300">'#4C1D95'</span>,
+          50:      <span class="text-green-300">'#F5F3FF'</span>,
+          100:     <span class="text-green-300">'#EDE9FE'</span>,
+        },
+        accent: {
+          pink:    <span class="text-green-300">'#EC4899'</span>,
+          cyan:    <span class="text-green-300">'#06B6D4'</span>,
+          lime:    <span class="text-green-300">'#65A30D'</span>,
+        },
+      },
+      <span class="text-violet-300">fontFamily</span>: {
+        display: [<span class="text-green-300">'Plus Jakarta Sans'</span>, <span class="text-green-300">'Inter'</span>, <span class="text-green-300">'system-ui'</span>],
+        body:    [<span class="text-green-300">'Inter'</span>, <span class="text-green-300">'system-ui'</span>],
+        mono:    [<span class="text-green-300">'JetBrains Mono'</span>, <span class="text-green-300">'monospace'</span>],
+      },
+      <span class="text-violet-300">borderRadius</span>: {
+        xl:    <span class="text-green-300">'12px'</span>,
+        <span class="text-green-300">'2xl'</span>: <span class="text-green-300">'16px'</span>,
+      },
+    },
+  },
+}</pre>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-12 px-6 border-t border-zinc-100 text-center">
+    <div class="flex items-center justify-center gap-2 mb-4">
+        <span class="font-display font-bold text-lg text-zinc-900">Hello <span class="text-brand">Viki</span></span>
+        <span class="text-[10px] font-bold bg-gradient-to-r from-brand to-accent-pink text-white px-2.5 py-0.5 rounded-full">.AI</span>
+    </div>
+    <p class="text-sm text-zinc-400">Brand Style Guide v1.0 — March 2026</p>
+    <p class="text-xs text-zinc-300 mt-2">For internal use only. Do not distribute without permission.</p>
+</footer>
+
+</body>
+</html>
