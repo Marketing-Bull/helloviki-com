@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Viki .AI — Remote AI-Powered Assistants for Healthcare & Law</title>
+    <meta name="description" content="AI-powered remote assistants for doctors, lawyers, and healthcare professionals. HIPAA compliant, 24-hour onboarding, free trial.">
+    <meta property="og:title" content="Hello Viki .AI — Remote AI-Powered Assistants">
+    <meta property="og:description" content="AI-powered remote assistants for healthcare and law. HIPAA compliant, free trial available.">
+    <meta property="og:url" content="https://helloviki.com">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://helloviki.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    brand: { DEFAULT: '#7C3AED', light: '#A78BFA', dark: '#4C1D95', deeper: '#3B0764', 50: '#F5F3FF', 100: '#EDE9FE' },
+                    accent: { pink: '#EC4899', 'pink-dark': '#DB2777', cyan: '#06B6D4', 'cyan-dark': '#0891B2', lime: '#65A30D' },
+                    surface: { DEFAULT: '#FFFFFF', soft: '#FAFAFB', warm: '#F8F7FF', muted: '#F1F0FB' }
+                },
+                fontFamily: {
+                    display: ['"Plus Jakarta Sans"', 'Inter', 'system-ui'],
+                    body: ['Inter', 'system-ui'],
+                    mono: ['"JetBrains Mono"', 'monospace']
+                }
+            }
+        }
+    }
+    </script>
+    <style>
+        .aurora-light {
+            background: radial-gradient(ellipse 80% 50% at 70% 0%, rgba(124,58,237,0.06) 0%, transparent 50%),
+                        radial-gradient(ellipse 60% 40% at 20% 100%, rgba(236,72,153,0.04) 0%, transparent 50%),
+                        radial-gradient(ellipse 40% 30% at 90% 60%, rgba(6,182,212,0.03) 0%, transparent 50%);
+        }
+        .gradient-text { background: linear-gradient(135deg, #7C3AED, #EC4899, #06B6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .card-hover { transition: all 0.2s; }
+        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(124,58,237,0.08); }
+    </style>
+</head>
+<body class="bg-white text-zinc-900 font-body antialiased">
+
+<!-- Skip to content link -->
+<a href="#main" class="sr-only focus:not-sr-only">Skip to main content</a>
+
+<!-- Header/Navigation -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-zinc-100">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-2">
+            <span class="font-display font-bold text-xl text-zinc-900">Hello <span class="text-brand">Viki</span></span>
+            <span class="text-[10px] font-bold bg-gradient-to-r from-brand to-accent-pink text-white px-2.5 py-0.5 rounded-full">.AI</span>
+        </a>
+        <button class="md:hidden text-zinc-900" id="mobileMenuBtn">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        <div class="hidden md:flex items-center gap-8">
+            <a href="/" class="text-sm text-zinc-900 hover:text-brand transition-colors">Home</a>
+            <a href="/doctors/" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">For Doctors</a>
+            <a href="/lawyers/" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">For Lawyers</a>
+            <a href="/careers/" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">Careers</a>
+            <a href="/contact/" class="text-sm bg-gradient-to-r from-brand to-accent-pink text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden fixed inset-0 top-16 z-40 bg-white md:hidden">
+    <div class="p-6 space-y-4">
+        <a href="/" class="block text-zinc-900 hover:text-brand transition-colors">Home</a>
+        <a href="/doctors/" class="block text-zinc-500 hover:text-zinc-900 transition-colors">For Doctors</a>
+        <a href="/lawyers/" class="block text-zinc-500 hover:text-zinc-900 transition-colors">For Lawyers</a>
+        <a href="/careers/" class="block text-zinc-500 hover:text-zinc-900 transition-colors">Careers</a>
+        <a href="/contact/" class="block bg-gradient-to-r from-brand to-accent-pink text-white px-6 py-2 rounded-lg text-center">Contact</a>
+    </div>
+</div>
+
+<main id="main" class="pt-20">
+
+<!-- Hero Section -->
+<section class="min-h-screen flex items-center justify-center aurora-light relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <div class="inline-flex items-center gap-2 mb-8 bg-brand-50 border border-brand-100 px-4 py-2 rounded-full">
+            <div class="w-2 h-2 rounded-full bg-brand animate-pulse"></div>
+            <span class="text-xs font-medium text-brand-dark">AI-Powered Remote Staffing</span>
+        </div>
+        <h1 class="font-display text-5xl md:text-7xl font-800 mb-6 tracking-tight text-zinc-900">
+            Remote Assistants<br><span class="gradient-text">Powered by AI</span>
+        </h1>
+        <p class="text-lg md:text-xl text-zinc-600 max-w-2xl mx-auto mb-4">
+            HIPAA-trained professionals equipped with AI tools — so one assistant does the work of three.
+        </p>
+        <p class="text-sm md:text-base text-zinc-500 max-w-2xl mx-auto mb-12">
+            We don't replace your staff with AI. We give your remote staff AI superpowers.
+        </p>
+        <a href="/contact/" class="inline-block bg-gradient-to-r from-brand to-accent-pink text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-brand/20 hover:shadow-brand/30 hover:-translate-y-0.5 transition-all mb-12">
+            Book a Free Consultation
+        </a>
+
+        <!-- Trust Badges -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
+            <div class="bg-white rounded-xl p-4 shadow-sm ring-1 ring-zinc-100">
+                <div class="text-2xl mb-2">✓</div>
+                <p class="text-xs font-semibold text-zinc-900">Free Trial</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-sm ring-1 ring-zinc-100">
+                <div class="text-2xl mb-2">🔒</div>
+                <p class="text-xs font-semibold text-zinc-900">HIPAA Compliant</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-sm ring-1 ring-zinc-100">
+                <div class="text-2xl mb-2">⚡</div>
+                <p class="text-xs font-semibold text-zinc-900">24h Onboarding</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-sm ring-1 ring-zinc-100">
+                <div class="text-2xl mb-2">🇺🇸</div>
+                <p class="text-xs font-semibold text-zinc-900">US Management</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="py-24 px-6 border-t border-zinc-100">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center text-zinc-900">How It Works</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <div class="w-16 h-16 rounded-full bg-brand-50 flex items-center justify-center mx-auto mb-6 text-2xl">📞</div>
+                <h3 class="font-display font-bold text-xl mb-3 text-zinc-900">Discovery Call</h3>
+                <p class="text-zinc-500">We learn about your practice, pain points, and workflows to match you with the perfect assistant.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 rounded-full bg-brand-50 flex items-center justify-center mx-auto mb-6 text-2xl">✓</div>
+                <h3 class="font-display font-bold text-xl mb-3 text-zinc-900">Screening & Onboarding</h3>
+                <p class="text-zinc-500">Your assistant gets trained on your specific EMR/case management system and workflows within 24 hours.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 rounded-full bg-brand-50 flex items-center justify-center mx-auto mb-6 text-2xl">😌</div>
+                <h3 class="font-display font-bold text-xl mb-3 text-zinc-900">Breathe Easy</h3>
+                <p class="text-zinc-500">Your assistant handles your busywork with AI superpowers. You focus on what matters most.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section class="py-24 px-6 bg-brand-50 border-t border-brand-100">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center text-zinc-900">What We Handle</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Administrative</h3>
+                <p class="text-sm text-zinc-500">Email management, scheduling, documentation, data entry.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Prior Authorization</h3>
+                <p class="text-sm text-zinc-500">Insurance follow-up, compliance tracking, status updates.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Patient Communication</h3>
+                <p class="text-sm text-zinc-500">Intake calls, confirmations, follow-ups, billing inquiries.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Billing & Collections</h3>
+                <p class="text-sm text-zinc-500">Invoice tracking, denial management, payment processing.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Medical Scribe</h3>
+                <p class="text-sm text-zinc-500">Chart notes, EMR updates, clinical documentation.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Project Management</h3>
+                <p class="text-sm text-zinc-500">Task coordination, deadline tracking, team communication.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Who We Serve -->
+<section class="py-24 px-6 border-t border-zinc-100">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center text-zinc-900">Who We Serve</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm card-hover hover:ring-brand-100">
+                <div class="text-4xl mb-4">🏥</div>
+                <h3 class="font-display font-bold text-2xl mb-3 text-zinc-900">Healthcare Professionals</h3>
+                <p class="text-zinc-500 mb-6">Doctors, practice managers, and clinics overwhelmed by prior auth, patient calls, and billing.</p>
+                <a href="/doctors/" class="text-brand hover:text-brand-dark font-semibold text-sm">Learn more →</a>
+            </div>
+            <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm card-hover hover:ring-brand-100">
+                <div class="text-4xl mb-4">⚖️</div>
+                <h3 class="font-display font-bold text-2xl mb-3 text-zinc-900">Legal Professionals</h3>
+                <p class="text-zinc-500 mb-6">Law firms struggling with intake calls, case management, and client communication.</p>
+                <a href="/lawyers/" class="text-brand hover:text-brand-dark font-semibold text-sm">Learn more →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-24 px-6 bg-surface-soft border-t border-zinc-100">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center text-zinc-900">What Our Clients Say</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm">
+                <div class="flex items-center gap-1 mb-4">★★★★★</div>
+                <p class="text-zinc-600 mb-6 italic">"Hiring an Assistant from HelloViki has been one of my best decisions so far. I now have more time to spend with my children while I'm assured that my inbox is being taken care of."</p>
+                <p class="font-semibold text-zinc-900">Bryant M.</p>
+                <p class="text-sm text-zinc-500">Medical Practice Owner</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm">
+                <div class="flex items-center gap-1 mb-4">★★★★★</div>
+                <p class="text-zinc-600 mb-6 italic">"HelloViki is one of the best investments I have ever made. I've been very pleased with the results and spent a great deal of time working on the big picture while my assistant takes care of the details."</p>
+                <p class="font-semibold text-zinc-900">Abby H.</p>
+                <p class="text-sm text-zinc-500">Healthcare Administrator</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm">
+                <div class="flex items-center gap-1 mb-4">★★★★★</div>
+                <p class="text-zinc-600 mb-6 italic">"Working with HelloViki has given our small and rapidly growing business the ability to move faster while simultaneously freeing up many hours a week."</p>
+                <p class="font-semibold text-zinc-900">Jason M.</p>
+                <p class="text-sm text-zinc-500">Law Firm Founder</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm">
+                <div class="flex items-center gap-1 mb-4">★★★★★</div>
+                <p class="text-zinc-600 mb-6 italic">"I cannot recommend HelloViki more highly. Once you have their support for a few tasks, you will wonder how you got along without them."</p>
+                <p class="font-semibold text-zinc-900">Amy M.</p>
+                <p class="text-sm text-zinc-500">Medical Director</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="py-20 px-6 bg-gradient-to-r from-brand to-accent-pink">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Transform Your Practice?</h2>
+        <p class="text-lg text-white/90 mb-8">Get your free consultation and discover how AI-powered assistants can save your team 20+ hours per week.</p>
+        <a href="/contact/" class="inline-block bg-white text-brand font-semibold px-8 py-4 rounded-xl hover:shadow-lg transition-all">
+            Book a Call
+        </a>
+    </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-zinc-900 text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-12 mb-12">
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="font-display font-bold text-lg">Hello <span class="text-brand-light">Viki</span></span>
+                    <span class="text-[10px] font-bold bg-gradient-to-r from-brand to-accent-pink text-white px-2.5 py-0.5 rounded-full">.AI</span>
+                </div>
+                <p class="text-sm text-zinc-400">AI-powered assistants for healthcare and law professionals.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Company</h4>
+                <ul class="space-y-2 text-sm text-zinc-400">
+                    <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="/careers/" class="hover:text-white transition-colors">Careers</a></li>
+                    <li><a href="/contact/" class="hover:text-white transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Industries</h4>
+                <ul class="space-y-2 text-sm text-zinc-400">
+                    <li><a href="/doctors/" class="hover:text-white transition-colors">Healthcare</a></li>
+                    <li><a href="/lawyers/" class="hover:text-white transition-colors">Legal</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Contact</h4>
+                <p class="text-sm text-zinc-400 mb-2">hello@helloviki.ai</p>
+                <p class="text-sm text-zinc-400 mb-2">(866) 798-8872</p>
+                <p class="text-sm text-zinc-400">West Palm Beach, FL</p>
+            </div>
+        </div>
+        <div class="border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm text-zinc-400">© 2026 Hello Viki AI. All rights reserved.</p>
+            <div class="flex gap-6 text-sm text-zinc-400 mt-4 md:mt-0">
+                <a href="/privacy-policy/" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="/terms-of-service/" class="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

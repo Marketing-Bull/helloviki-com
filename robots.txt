@@ -1,0 +1,17 @@
+# HelloViki.com robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+
+# Allow Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Crawl delay for other bots
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://helloviki.com/sitemap.xml

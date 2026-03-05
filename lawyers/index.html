@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistants for Law Firms & Lawyers | Hello Viki</title>
+    <meta name="description" content="AI-powered legal assistants for law firms. Intake management, case management, client communication, document preparation.">
+    <meta property="og:title" content="AI Assistants for Law Firms & Lawyers">
+    <meta property="og:description" content="AI legal assistants for law firms. Remote, fully trained, available 24/7.">
+    <meta property="og:url" content="https://helloviki.com/lawyers/">
+    <link rel="canonical" href="https://helloviki.com/lawyers/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    brand: { DEFAULT: '#7C3AED', light: '#A78BFA', dark: '#4C1D95', deeper: '#3B0764', 50: '#F5F3FF', 100: '#EDE9FE' },
+                    accent: { pink: '#EC4899', 'pink-dark': '#DB2777', cyan: '#06B6D4', 'cyan-dark': '#0891B2', lime: '#65A30D' },
+                    surface: { DEFAULT: '#FFFFFF', soft: '#FAFAFB', warm: '#F8F7FF', muted: '#F1F0FB' }
+                },
+                fontFamily: {
+                    display: ['"Plus Jakarta Sans"', 'Inter', 'system-ui'],
+                    body: ['Inter', 'system-ui'],
+                    mono: ['"JetBrains Mono"', 'monospace']
+                }
+            }
+        }
+    }
+    </script>
+    <style>
+        .aurora-light {
+            background: radial-gradient(ellipse 80% 50% at 70% 0%, rgba(124,58,237,0.06) 0%, transparent 50%),
+                        radial-gradient(ellipse 60% 40% at 20% 100%, rgba(236,72,153,0.04) 0%, transparent 50%),
+                        radial-gradient(ellipse 40% 30% at 90% 60%, rgba(6,182,212,0.03) 0%, transparent 50%);
+        }
+        .gradient-text { background: linear-gradient(135deg, #7C3AED, #EC4899, #06B6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .card-hover { transition: all 0.2s; }
+        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(124,58,237,0.08); }
+    </style>
+</head>
+<body class="bg-white text-zinc-900 font-body antialiased">
+
+<a href="#main" class="sr-only focus:not-sr-only">Skip to main content</a>
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-zinc-100">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-2">
+            <span class="font-display font-bold text-xl text-zinc-900">Hello <span class="text-brand">Viki</span></span>
+            <span class="text-[10px] font-bold bg-gradient-to-r from-brand to-accent-pink text-white px-2.5 py-0.5 rounded-full">.AI</span>
+        </a>
+        <button class="md:hidden text-zinc-900" id="mobileMenuBtn">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        <div class="hidden md:flex items-center gap-8">
+            <a href="/" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">Home</a>
+            <a href="/doctors/" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">For Doctors</a>
+            <a href="/lawyers/" class="text-sm text-zinc-900 hover:text-brand transition-colors">For Lawyers</a>
+            <a href="/careers/" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">Careers</a>
+            <a href="/contact/" class="text-sm bg-gradient-to-r from-brand to-accent-pink text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<div id="mobileMenu" class="hidden fixed inset-0 top-16 z-40 bg-white md:hidden">
+    <div class="p-6 space-y-4">
+        <a href="/" class="block text-zinc-500 hover:text-zinc-900 transition-colors">Home</a>
+        <a href="/doctors/" class="block text-zinc-500 hover:text-zinc-900 transition-colors">For Doctors</a>
+        <a href="/lawyers/" class="block text-zinc-900 hover:text-brand transition-colors">For Lawyers</a>
+        <a href="/careers/" class="block text-zinc-500 hover:text-zinc-900 transition-colors">Careers</a>
+        <a href="/contact/" class="block bg-gradient-to-r from-brand to-accent-pink text-white px-6 py-2 rounded-lg text-center">Contact</a>
+    </div>
+</div>
+
+<main id="main" class="pt-20">
+
+<!-- Hero -->
+<section class="min-h-screen flex items-center justify-center aurora-light relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <h1 class="font-display text-5xl md:text-6xl font-800 mb-6 tracking-tight text-zinc-900">
+            AI-Powered Assistants for<br><span class="gradient-text">Law Firms</span>
+        </h1>
+        <p class="text-lg md:text-xl text-zinc-600 max-w-2xl mx-auto mb-12">
+            Remote legal assistants trained on case management, intake, and client communication — with AI automation built in.
+        </p>
+        <a href="/contact/" class="inline-block bg-gradient-to-r from-brand to-accent-pink text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-brand/20 hover:shadow-brand/30 hover:-translate-y-0.5 transition-all">
+            Book a Consultation
+        </a>
+    </div>
+</section>
+
+<!-- Pain Points -->
+<section class="py-24 px-6 border-t border-zinc-100">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center text-zinc-900">Challenges We Solve</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-2xl p-8 border-l-4 border-l-brand ring-1 ring-zinc-200 shadow-sm">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">📞 Missed Intake Calls</h3>
+                <p class="text-zinc-500">Potential clients can't reach you, and leads slip through the cracks.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 border-l-4 border-l-brand ring-1 ring-zinc-200 shadow-sm">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">⏳ Slow Follow-up</h3>
+                <p class="text-zinc-500">Manual case management delays mean clients get frustrated and go elsewhere.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 border-l-4 border-l-brand ring-1 ring-zinc-200 shadow-sm">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">📋 Case Management Overhead</h3>
+                <p class="text-zinc-500">Your team spends hours on document management, scheduling, and client communication.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 border-l-4 border-l-brand ring-1 ring-zinc-200 shadow-sm">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">💼 Limited Scalability</h3>
+                <p class="text-zinc-500">You can't grow without hiring more staff, and good paralegals are hard to find.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Legal-Specific Services -->
+<section class="py-24 px-6 bg-brand-50 border-t border-brand-100">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center text-zinc-900">Legal Services</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Intake Management</h3>
+                <p class="text-sm text-zinc-500">Answer calls, qualify leads, schedule consultations, follow up with prospects 24/7.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Case Management</h3>
+                <p class="text-sm text-zinc-500">Document organization, deadline tracking, status updates, client coordination.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Client Communication</h3>
+                <p class="text-sm text-zinc-500">Status updates, appointment reminders, document requests, billing inquiries.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Document Preparation</h3>
+                <p class="text-sm text-zinc-500">Template-based drafting, discovery assistance, document indexing and filing.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Calendar & Scheduling</h3>
+                <p class="text-sm text-zinc-500">Court deadlines, meeting scheduling, conflict detection, deadline management.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Software Integration</h3>
+                <p class="text-sm text-zinc-500">Works with Clio, MyCase, Lawcado, and any case management platform.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 px-6 bg-gradient-to-r from-brand to-accent-pink">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-white">Scale Your Firm Without Hiring</h2>
+        <p class="text-lg text-white/90 mb-8">See how our legal assistants can increase your intake by 50% and handle 80% of follow-up work.</p>
+        <a href="/contact/" class="inline-block bg-white text-brand font-semibold px-8 py-4 rounded-xl hover:shadow-lg transition-all">
+            Schedule a Demo
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-zinc-900 text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-12 mb-12">
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="font-display font-bold text-lg">Hello <span class="text-brand-light">Viki</span></span>
+                    <span class="text-[10px] font-bold bg-gradient-to-r from-brand to-accent-pink text-white px-2.5 py-0.5 rounded-full">.AI</span>
+                </div>
+                <p class="text-sm text-zinc-400">AI-powered assistants for healthcare and law professionals.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Company</h4>
+                <ul class="space-y-2 text-sm text-zinc-400">
+                    <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="/careers/" class="hover:text-white transition-colors">Careers</a></li>
+                    <li><a href="/contact/" class="hover:text-white transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Industries</h4>
+                <ul class="space-y-2 text-sm text-zinc-400">
+                    <li><a href="/doctors/" class="hover:text-white transition-colors">Healthcare</a></li>
+                    <li><a href="/lawyers/" class="hover:text-white transition-colors">Legal</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Contact</h4>
+                <p class="text-sm text-zinc-400 mb-2">hello@helloviki.ai</p>
+                <p class="text-sm text-zinc-400 mb-2">(866) 798-8872</p>
+                <p class="text-sm text-zinc-400">West Palm Beach, FL</p>
+            </div>
+        </div>
+        <div class="border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm text-zinc-400">© 2026 Hello Viki AI. All rights reserved.</p>
+            <div class="flex gap-6 text-sm text-zinc-400 mt-4 md:mt-0">
+                <a href="/privacy-policy/" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="/terms-of-service/" class="hover:text-white transition-colors">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
