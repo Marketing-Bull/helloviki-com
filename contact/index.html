@@ -205,19 +205,14 @@ document.getElementById('contactForm').addEventListener('submit', async function
         lastName: document.getElementById('lastName').value,
         email: document.getElementById('email').value,
         phone: document.getElementById('phone').value,
-        locationId: 'eKD6Wc81KqpIDGuym6kh',
         tags: ['website-contact'],
         source: 'HelloViki Website'
     };
 
     try {
-        const response = await fetch('https://services.leadconnectorhq.com/contacts/', {
+        const response = await fetch('/api/contact', {
             method: 'POST',
-            headers: {
-                'Authorization': 'Bearer pit-f59ec7e9-42d4-44c3-b12d-dcdd199861e0',
-                'Version': '2021-07-28',
-                'Content-Type': 'application/json'
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
         });
 
