@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Injury Virtual Assistants | AI-Powered PI Law Firm Staffing | Hello Viki AI</title>
+    <meta name="description" content="Hire AI-powered virtual assistants with personal injury experience. Intake specialists, case managers, and admin support for PI law firms. HIPAA trained, available 24/7.">
+    <meta property="og:title" content="Personal Injury Virtual Assistants | AI-Powered PI Law Firm Staffing">
+    <meta property="og:description" content="Hire AI-powered virtual assistants with personal injury experience. Intake specialists, case managers, and admin support for PI law firms.">
+    <meta property="og:url" content="https://helloviki.com/personal-injury/">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://helloviki.com/personal-injury/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    brand: { DEFAULT: '#7C3AED', light: '#A78BFA', dark: '#4C1D95', deeper: '#3B0764', 50: '#F5F3FF', 100: '#EDE9FE' },
+                    accent: { pink: '#EC4899', 'pink-dark': '#DB2777', cyan: '#06B6D4', 'cyan-dark': '#0891B2', lime: '#65A30D' },
+                    surface: { DEFAULT: '#FFFFFF', soft: '#FAFAFB', warm: '#F8F7FF', muted: '#F1F0FB' }
+                },
+                fontFamily: {
+                    display: ['"Plus Jakarta Sans"', 'Inter', 'system-ui'],
+                    body: ['Inter', 'system-ui'],
+                    mono: ['"JetBrains Mono"', 'monospace']
+                }
+            }
+        }
+    }
+    </script>
+    <style>
+        .aurora-light {
+            background: radial-gradient(ellipse 80% 50% at 70% 0%, rgba(124,58,237,0.06) 0%, transparent 50%),
+                        radial-gradient(ellipse 60% 40% at 20% 100%, rgba(236,72,153,0.04) 0%, transparent 50%),
+                        radial-gradient(ellipse 40% 30% at 90% 60%, rgba(6,182,212,0.03) 0%, transparent 50%);
+        }
+        .gradient-text { background: linear-gradient(135deg, #7C3AED, #EC4899, #06B6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .card-hover { transition: all 0.2s; }
+        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(124,58,237,0.08); }
+    </style>
+
+    <!-- Schema: Service Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Personal Injury Virtual Assistant Services",
+        "provider": {
+            "@type": "Organization",
+            "name": "Hello Viki AI",
+            "url": "https://helloviki.com"
+        },
+        "description": "AI-powered virtual assistants specializing in personal injury law firm support including intake management, case management, medical records coordination, and client communication.",
+        "url": "https://helloviki.com/personal-injury/",
+        "serviceType": "Virtual Assistant Services for Personal Injury Law Firms",
+        "areaServed": "US",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "PI Virtual Assistant Services",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "PI Intake & Lead Qualification" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "PI Case Management" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Medical Records Coordination" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lien Resolution Support" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Insurance Follow-up" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Client Communication" } }
+            ]
+        }
+    }
+    </script>
+</head>
+<body class="bg-white text-zinc-900 font-body antialiased">
+
+<a href="#main" class="sr-only focus:not-sr-only">Skip to main content</a>
+
+<!-- Header/Navigation -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-zinc-100">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-2">
+            <span class="font-display font-bold text-xl text-zinc-900">Hello <span class="text-brand">Viki</span></span>
+            <span class="text-[10px] font-bold bg-gradient-to-r from-brand to-accent-pink text-white px-2.5 py-0.5 rounded-full">.AI</span>
+        </a>
+        <button class="md:hidden text-zinc-900" id="mobileMenuBtn">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        <div class="hidden md:flex items-center gap-8">
+            <a href="/" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">Home</a>
+            <a href="/doctors/" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">For Doctors</a>
+            <a href="/lawyers/" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">For Lawyers</a>
+            <a href="/personal-injury/" class="text-sm text-zinc-900 hover:text-brand transition-colors">Personal Injury</a>
+            <a href="/careers/" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">Careers</a>
+            <a href="/contact/" class="text-sm bg-gradient-to-r from-brand to-accent-pink text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden fixed inset-0 top-16 z-40 bg-white md:hidden">
+    <div class="p-6 space-y-4">
+        <a href="/" class="block text-zinc-500 hover:text-zinc-900 transition-colors">Home</a>
+        <a href="/doctors/" class="block text-zinc-500 hover:text-zinc-900 transition-colors">For Doctors</a>
+        <a href="/lawyers/" class="block text-zinc-500 hover:text-zinc-900 transition-colors">For Lawyers</a>
+        <a href="/personal-injury/" class="block text-zinc-900 hover:text-brand transition-colors">Personal Injury</a>
+        <a href="/careers/" class="block text-zinc-500 hover:text-zinc-900 transition-colors">Careers</a>
+        <a href="/contact/" class="block bg-gradient-to-r from-brand to-accent-pink text-white px-6 py-2 rounded-lg text-center">Contact</a>
+    </div>
+</div>
+
+<main id="main" class="pt-20">
+
+<!-- Hero -->
+<section class="min-h-screen flex items-center justify-center aurora-light relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <div class="inline-flex items-center gap-2 mb-8 bg-brand-50 border border-brand-100 px-4 py-2 rounded-full">
+            <div class="w-2 h-2 rounded-full bg-brand animate-pulse"></div>
+            <span class="text-xs font-medium text-brand-dark">Personal Injury Specialists</span>
+        </div>
+        <h1 class="font-display text-5xl md:text-6xl font-800 mb-6 tracking-tight text-zinc-900">
+            AI-Powered Assistants for<br><span class="gradient-text">Personal Injury Law Firms</span>
+        </h1>
+        <p class="text-lg md:text-xl text-zinc-600 max-w-2xl mx-auto mb-4">
+            Your firm loses cases when intake calls go unanswered. Our AI-equipped personal injury virtual assistants answer every call, qualify every lead, and keep your pipeline full.
+        </p>
+        <p class="text-sm md:text-base text-zinc-500 max-w-2xl mx-auto mb-12">
+            Dedicated PI law firm remote assistants trained on intake, case management, medical records, and lien resolution — available 24/7 so you never miss another signed case.
+        </p>
+        <a href="/contact/" class="inline-block bg-gradient-to-r from-brand to-accent-pink text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-brand/20 hover:shadow-brand/30 hover:-translate-y-0.5 transition-all mb-12">
+            Book a Free PI Consultation
+        </a>
+
+        <!-- Trust Badges -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
+            <div class="bg-white rounded-xl p-4 shadow-sm ring-1 ring-zinc-100">
+                <div class="text-2xl mb-2">⚖️</div>
+                <p class="text-xs font-semibold text-zinc-900">PI Experienced</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-sm ring-1 ring-zinc-100">
+                <div class="text-2xl mb-2">🔒</div>
+                <p class="text-xs font-semibold text-zinc-900">HIPAA Trained</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-sm ring-1 ring-zinc-100">
+                <div class="text-2xl mb-2">⚡</div>
+                <p class="text-xs font-semibold text-zinc-900">24-48h Go Live</p>
+            </div>
+            <div class="bg-white rounded-xl p-4 shadow-sm ring-1 ring-zinc-100">
+                <div class="text-2xl mb-2">📞</div>
+                <p class="text-xs font-semibold text-zinc-900">24/7 Intake Coverage</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pain Points -->
+<section class="py-24 px-6 border-t border-zinc-100">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-center text-zinc-900">The Problems Killing Your PI Firm's Revenue</h2>
+        <p class="text-center text-zinc-500 mb-12 max-w-2xl mx-auto">Every missed call is a missed case. Every slow follow-up is revenue walking out the door. Here's what's costing your firm the most.</p>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-2xl p-8 border-l-4 border-l-red-500 ring-1 ring-zinc-200 shadow-sm">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">📞 Missed Intake Calls</h3>
+                <p class="text-zinc-500">Research shows <strong>30-40% of calls to PI firms go unanswered</strong>. Every missed call is a potential client — with an average case value of $5,000 to $50,000+ — calling the next firm on Google. After-hours, weekends, and lunch breaks are when your most valuable leads call and get voicemail.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 border-l-4 border-l-orange-500 ring-1 ring-zinc-200 shadow-sm">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">⏱️ Slow Speed-to-Lead</h3>
+                <p class="text-zinc-500">The <strong>5-minute rule</strong> is everything in PI. If you don't reach a lead within 5 minutes, your conversion rate drops by 10x. Most PI firms take hours — or days — to follow up on web form submissions, chat inquiries, and referrals. Your competitors are faster.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 border-l-4 border-l-yellow-500 ring-1 ring-zinc-200 shadow-sm">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">📋 Case Management Overhead</h3>
+                <p class="text-zinc-500">Your attorneys and paralegals are buried in administrative work — status updates, lien tracking, medical records requests, client check-ins. The billable work suffers. Case deadlines get tight. Client satisfaction drops because nobody has time to return calls.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 border-l-4 border-l-brand ring-1 ring-zinc-200 shadow-sm">
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">🔄 Leads That Never Get Follow-up</h3>
+                <p class="text-zinc-500"><strong>50% of PI leads never receive a second touch.</strong> They filled out a form, maybe left a voicemail, but nobody followed up within 24 hours. That lead signed with another firm. Systematic follow-up sequences are the difference between a 5% and 15% sign rate.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What Our PI Assistants Handle -->
+<section class="py-24 px-6 bg-brand-50 border-t border-brand-100">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-center text-zinc-900">What Our Personal Injury Assistants Handle</h2>
+        <p class="text-center text-zinc-500 mb-12 max-w-2xl mx-auto">Our virtual assistants for personal injury lawyers are trained on every phase of the PI case lifecycle — from first call to settlement.</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <div class="text-2xl mb-3">📞</div>
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Intake & Lead Qualification</h3>
+                <p class="text-sm text-zinc-500">First-call handling for new PI leads. Accident screening, injury qualification, insurance verification, retainer packet preparation, and immediate follow-up. Your personal injury intake specialist answers every call.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <div class="text-2xl mb-3">📂</div>
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Case Management</h3>
+                <p class="text-sm text-zinc-500">End-to-end personal injury case management support. Status tracking, deadline management, statute of limitations monitoring, client updates, and task coordination across your entire caseload.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <div class="text-2xl mb-3">🏥</div>
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Medical Records</h3>
+                <p class="text-sm text-zinc-500">Requesting records from providers, organizing and indexing medical documentation, summarizing treatment histories, tracking outstanding records, and coordinating with treating physicians.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <div class="text-2xl mb-3">📝</div>
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Demand Letter Support</h3>
+                <p class="text-sm text-zinc-500">Gathering and organizing all documentation needed for demand packages — medical bills, treatment records, lost wage verification, property damage evidence, and pain & suffering documentation.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <div class="text-2xl mb-3">💬</div>
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Client Communication</h3>
+                <p class="text-sm text-zinc-500">Regular case status updates, appointment scheduling and reminders, document request follow-ups, and keeping clients informed so they don't call your attorneys 10 times a day asking for updates.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <div class="text-2xl mb-3">🔗</div>
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Lien Resolution</h3>
+                <p class="text-sm text-zinc-500">Tracking Medicare, Medicaid, and private health insurance liens. Coordinating with lien holders, obtaining lien amounts, negotiating reductions, and ensuring clean settlement disbursements.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <div class="text-2xl mb-3">🛡️</div>
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Insurance Follow-up</h3>
+                <p class="text-sm text-zinc-500">Claims status tracking, adjuster communication, PIP/MedPay follow-up, UM/UIM claims processing, and ensuring insurance companies don't stall your cases with delay tactics.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <div class="text-2xl mb-3">💻</div>
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">CRM & Software</h3>
+                <p class="text-sm text-zinc-500">Our PI assistants are trained on the platforms your firm already uses — Clio, MyCase, Filevine, Litify, SmartAdvocate, PracticePanther, Needles, and CASEpeer. No learning curve.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works -->
+<section class="py-24 px-6 border-t border-zinc-100">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center text-zinc-900">How It Works</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <div class="w-16 h-16 rounded-full bg-brand-50 flex items-center justify-center mx-auto mb-6">
+                    <span class="text-2xl font-display font-bold text-brand">1</span>
+                </div>
+                <h3 class="font-display font-bold text-xl mb-3 text-zinc-900">Discovery Call</h3>
+                <p class="text-zinc-500">We learn your firm's workflows, case types (auto, slip & fall, med mal, premises liability), intake process, and software stack. We identify where you're losing leads and where a PI remote assistant creates the most impact.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 rounded-full bg-brand-50 flex items-center justify-center mx-auto mb-6">
+                    <span class="text-2xl font-display font-bold text-brand">2</span>
+                </div>
+                <h3 class="font-display font-bold text-xl mb-3 text-zinc-900">Screening & Training</h3>
+                <p class="text-sm text-zinc-500">We match you with a personal injury case manager or intake specialist who already has PI experience. They're trained on your specific case management system, intake scripts, and firm protocols before day one.</p>
+            </div>
+            <div class="text-center">
+                <div class="w-16 h-16 rounded-full bg-brand-50 flex items-center justify-center mx-auto mb-6">
+                    <span class="text-2xl font-display font-bold text-brand">3</span>
+                </div>
+                <h3 class="font-display font-bold text-xl mb-3 text-zinc-900">Go Live in 24-48 Hours</h3>
+                <p class="text-zinc-500">Your personal injury virtual assistant is live and handling intake calls, case admin, and client communication within 24-48 hours. Full AI toolkit included — so one assistant genuinely does the work of three.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PI Industry Stats -->
+<section class="py-24 px-6 bg-zinc-900 text-white">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-center">The Numbers Behind PI Firm Staffing</h2>
+        <p class="text-center text-zinc-400 mb-12 max-w-2xl mx-auto">These are the industry benchmarks that drive how we train our personal injury virtual assistants. Every workflow we build is designed to move these numbers in your favor.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="text-center bg-zinc-800 rounded-2xl p-8">
+                <p class="text-4xl md:text-5xl font-display font-bold text-brand-light mb-3">30-40%</p>
+                <p class="text-sm text-zinc-400">of calls PI firms miss — every one a potential signed case</p>
+            </div>
+            <div class="text-center bg-zinc-800 rounded-2xl p-8">
+                <p class="text-4xl md:text-5xl font-display font-bold text-accent-pink mb-3">5 min</p>
+                <p class="text-sm text-zinc-400">speed-to-lead window before conversion drops 10x</p>
+            </div>
+            <div class="text-center bg-zinc-800 rounded-2xl p-8">
+                <p class="text-4xl md:text-5xl font-display font-bold text-accent-cyan mb-3">$5K+</p>
+                <p class="text-sm text-zinc-400">average cost per signed PI case from paid marketing</p>
+            </div>
+            <div class="text-center bg-zinc-800 rounded-2xl p-8">
+                <p class="text-4xl md:text-5xl font-display font-bold text-green-400 mb-3">5-10%</p>
+                <p class="text-sm text-zinc-400">average lead-to-case conversion — we help you double it</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why AI-Powered Matters for PI -->
+<section class="py-24 px-6 border-t border-zinc-100">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-center text-zinc-900">Why AI-Powered Matters for Personal Injury Firms</h2>
+        <p class="text-center text-zinc-500 mb-12 max-w-3xl mx-auto">A traditional virtual assistant answers calls and does data entry. Our AI-equipped personal injury virtual assistants do that — plus everything a $75K/year paralegal does, at a fraction of the cost.</p>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm">
+                <h3 class="font-display font-bold text-lg mb-3 text-zinc-900">🤖 AI-Assisted Intake Screening</h3>
+                <p class="text-sm text-zinc-500">Our assistants use AI tools to instantly pull up caller information, pre-qualify cases against your criteria, and generate intake summaries — so your attorneys only review leads that meet your case acceptance standards.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm">
+                <h3 class="font-display font-bold text-lg mb-3 text-zinc-900">📊 Automated Follow-up Sequences</h3>
+                <p class="text-sm text-zinc-500">AI-powered drip campaigns ensure every lead gets 5-7 touchpoints across call, text, and email. No lead falls through the cracks. Your personal injury intake specialist manages the entire nurture process.</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm">
+                <h3 class="font-display font-bold text-lg mb-3 text-zinc-900">📋 Smart Document Processing</h3>
+                <p class="text-sm text-zinc-500">Medical records summaries, demand letter document assembly, and case timeline creation — tasks that used to take hours now take minutes with AI assistance while your personal injury case manager handles coordination.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Software Compatibility -->
+<section class="py-24 px-6 bg-brand-50 border-t border-brand-100">
+    <div class="max-w-5xl mx-auto text-center">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 text-zinc-900">Works With Your Existing Software</h2>
+        <p class="text-zinc-500 mb-12 max-w-2xl mx-auto">Our PI virtual assistants are pre-trained on the case management platforms personal injury firms actually use. No migration required — we plug into your existing stack.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white rounded-xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <p class="font-display font-bold text-zinc-900">Clio</p>
+                <p class="text-xs text-zinc-500 mt-1">Manage & Grow</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <p class="font-display font-bold text-zinc-900">MyCase</p>
+                <p class="text-xs text-zinc-500 mt-1">Case Management</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <p class="font-display font-bold text-zinc-900">Filevine</p>
+                <p class="text-xs text-zinc-500 mt-1">Legal OS</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <p class="font-display font-bold text-zinc-900">Litify</p>
+                <p class="text-xs text-zinc-500 mt-1">Salesforce-Based</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <p class="font-display font-bold text-zinc-900">SmartAdvocate</p>
+                <p class="text-xs text-zinc-500 mt-1">PI Focused</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <p class="font-display font-bold text-zinc-900">PracticePanther</p>
+                <p class="text-xs text-zinc-500 mt-1">All-in-One</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <p class="font-display font-bold text-zinc-900">Needles</p>
+                <p class="text-xs text-zinc-500 mt-1">Neos by Assembly</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 ring-1 ring-zinc-200 shadow-sm card-hover">
+                <p class="font-display font-bold text-zinc-900">CASEpeer</p>
+                <p class="text-xs text-zinc-500 mt-1">PI & Trial</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-24 px-6 bg-surface-soft border-t border-zinc-100">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center text-zinc-900">What Our Clients Say</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm">
+                <div class="flex items-center gap-1 mb-4">★★★★★</div>
+                <p class="text-zinc-600 mb-6 italic">"Working with HelloViki has given our small and rapidly growing business the ability to move faster while simultaneously freeing up many hours a week."</p>
+                <p class="font-semibold text-zinc-900">Jason M.</p>
+                <p class="text-sm text-zinc-500">Law Firm Founder</p>
+            </div>
+            <div class="bg-white rounded-2xl p-8 ring-1 ring-zinc-200 shadow-sm">
+                <div class="flex items-center gap-1 mb-4">★★★★★</div>
+                <p class="text-zinc-600 mb-6 italic">"I cannot recommend HelloViki more highly. Once you have their support for a few tasks, you will wonder how you got along without them."</p>
+                <p class="font-semibold text-zinc-900">Amy M.</p>
+                <p class="text-sm text-zinc-500">Medical Director</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="py-20 px-6 bg-gradient-to-r from-brand to-accent-pink">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6 text-white">Stop Losing Cases to Missed Calls</h2>
+        <p class="text-lg text-white/90 mb-4">Every hour without intake coverage is revenue walking out the door. Our personal injury virtual assistants are live within 48 hours.</p>
+        <p class="text-sm text-white/70 mb-8">Free consultation · No long-term contracts · Cancel anytime</p>
+        <a href="/contact/" class="inline-block bg-white text-brand font-semibold px-8 py-4 rounded-xl hover:shadow-lg transition-all">
+            Book a Call Now
+        </a>
+    </div>
+</section>
+
+<!-- FAQ / Bottom Content for SEO -->
+<section class="py-24 px-6 border-t border-zinc-100">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-12 text-center text-zinc-900">Common Questions About PI Virtual Assistants</h2>
+
+        <div class="space-y-8">
+            <div>
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">What experience do your personal injury virtual assistants have?</h3>
+                <p class="text-zinc-500">Our PI assistants come with real-world experience in personal injury law firm operations — intake processing, case management, medical records coordination, and client communication. They understand PI terminology, case timelines, and the urgency of speed-to-lead in personal injury marketing. Before placement, every assistant completes additional training specific to your firm's workflows, software, and case acceptance criteria.</p>
+            </div>
+
+            <div>
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">How quickly can a PI virtual assistant start?</h3>
+                <p class="text-zinc-500">Most personal injury virtual assistants are live within 24-48 hours of your discovery call. We maintain a bench of pre-screened, PI-experienced assistants so we can match your firm quickly. Your assistant will be trained on your specific case management platform (Clio, Filevine, SmartAdvocate, etc.) and intake scripts before their first day.</p>
+            </div>
+
+            <div>
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Can your assistants handle intake calls for personal injury cases?</h3>
+                <p class="text-zinc-500">Absolutely — intake and lead qualification is our specialty. Your personal injury intake specialist will handle first-call screening, accident details collection, injury severity assessment, insurance verification, and retainer packet delivery. They follow your firm's specific intake criteria and scripts, and they're trained to convert warm leads into signed cases with speed and professionalism.</p>
+            </div>
+
+            <div>
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">What makes your service different from a regular virtual assistant company?</h3>
+                <p class="text-zinc-500">Two things: PI specialization and AI tools. Generic VA companies give you someone who's never touched a case management system. Our assistants have personal injury experience from day one. Plus, they're equipped with AI automation tools for document processing, follow-up sequences, and data entry — so one assistant genuinely handles the workload of two or three traditional hires.</p>
+            </div>
+
+            <div>
+                <h3 class="font-display font-bold text-lg mb-2 text-zinc-900">Is client data secure and HIPAA compliant?</h3>
+                <p class="text-zinc-500">Yes. All assistants complete HIPAA compliance training before placement. We use secure, encrypted communication channels, and our assistants follow strict data handling protocols. Your clients' personal health information and case details are protected at every step.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-zinc-900 text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-12 mb-12">
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="font-display font-bold text-lg">Hello <span class="text-brand-light">Viki</span></span>
+                    <span class="text-[10px] font-bold bg-gradient-to-r from-brand to-accent-pink text-white px-2.5 py-0.5 rounded-full">.AI</span>
+                </div>
+                <p class="text-sm text-zinc-400">AI-powered assistants for healthcare and law professionals.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Company</h4>
+                <ul class="space-y-2 text-sm text-zinc-400">
+                    <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+                    <li><a href="/careers/" class="hover:text-white transition-colors">Careers</a></li>
+                    <li><a href="/contact/" class="hover:text-white transition-colors">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Industries</h4>
+                <ul class="space-y-2 text-sm text-zinc-400">
+                    <li><a href="/doctors/" class="hover:text-white transition-colors">Healthcare</a></li>
+                    <li><a href="/lawyers/" class="hover:text-white transition-colors">Legal</a></li>
+                    <li><a href="/personal-injury/" class="hover:text-white transition-colors">Personal Injury</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Contact</h4>
+                <p class="text-sm text-zinc-400 mb-2">hello@helloviki.ai</p>
+                <p class="text-sm text-zinc-400 mb-2">(866) 798-8872</p>
+                <p class="text-sm text-zinc-400">West Palm Beach, FL</p>
+            </div>
+        </div>
+        <div class="border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm text-zinc-400">© 2026 Hello Viki AI. All rights reserved.</p>
+            <div class="flex gap-6 text-sm text-zinc-400 mt-4 md:mt-0">
+                <a href="/privacy-policy/" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="/terms-of-service/" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="/accessibility/" class="hover:text-white transition-colors">Accessibility</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
